@@ -65,3 +65,20 @@ let n = 9;
 for (let i = 0; i <= 10; i++) {
     console.log(`${n} x ${i} = ${n * i}`);  
 }
+
+//Functions
+function soma(s1, s2) {
+    return s1 + s2;
+}
+let resultado = soma(1, 2);
+console.log(resultado);
+
+
+//Functions - Construindo uma calculadora simples
+function calculadora(s1, s2, sinal) {
+    return eval (`${s1} ${sinal} ${s2}`);
+}
+let somando = calculadora(1, 2, "+");
+console.log(somando);
+
+
