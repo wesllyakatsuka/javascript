@@ -82,3 +82,14 @@ let somando = calculadora(1, 2, "+");
 console.log(somando);
 
 
+//Arrow Functions com Eventos de captura
+//Contabiliza todos os cliques com o mouse nas extremidades do navegador
+window.addEventListener('focus', event => {
+    console.log('focus');
+});
+
+//Contabiliza todos os cliques com o mouse na área do site tipo <body>
+document.addEventListener('click', event => {
+    console.log('click');
+});
+
