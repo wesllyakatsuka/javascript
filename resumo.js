@@ -113,5 +113,24 @@ let agora3 = new Date();
 console.log(agora3.toLocaleDateString("pt-BR"));
 
 
-//
+// vetores - arrays
 let carros = ["palio 98", "Toro", "Uno", 10, true, new Date(), function(){}];
+//exibe o todos os elementos do vetor
+console.log(carros);
+//exibe o elemento que está na posição 0;
+console.log(carros[0]);
+//exibe o tamanho do vetor
+console.log(carros.length);
+//busca a função Date e ainda formata a sua saída
+console.log(carros[5].getFullYear());
+
+//Percorre cada elemento do vetor e passa parametros para função anônima
+carros.forEach(function(value, index) {
+    console.log(index, value);
+});
+
+//O mesmo conceito com outro exemplo
+var restaurantes = ["Jun Sakamoto", "Fasano", "Chico Burguer", 2018, false];
+restaurantes.forEach(function(value, index){
+    console.log(index, value);
+});
