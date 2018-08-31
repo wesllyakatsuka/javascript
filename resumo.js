@@ -93,3 +93,25 @@ document.addEventListener('click', event => {
     console.log('click');
 });
 
+
+
+//Trabalhando com datas
+//Olha que bizarro
+Date.now();
+console.log(Date.now()); // A sáida em 30/08/2018 foi a seguinte: "1535627236946". Isso porque é calculado Quantidade de segundos desde 01/01/1970. hahahahaha
+
+//Formatando um pouco, já melhora e fica completo!
+let agora = new Date(1000);
+console.log(agora);
+
+//Mas, se você quiser o dia, o mês ou somente o ano utilizando ".getDate()" ou "getMonth()" ou "getFullYear()" respectivamente.
+let agora2 = new Date();
+console.log(agora2.getFullYear());
+
+//Tem como usar algo mais elaborado
+let agora3 = new Date();
+console.log(agora3.toLocaleDateString("pt-BR"));
+
+
+//
+let carros = ["palio 98", "Toro", "Uno", 10, true, new Date(), function(){}];
