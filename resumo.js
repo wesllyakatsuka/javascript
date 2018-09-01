@@ -38,8 +38,8 @@ if (cor == "verde") {
 
 
 //Estrutura de controle "switch"
-var cor = "vermelho"
-switch (cor) {
+var cor2 = "vermelho"
+switch (cor2) {
     case "verde":
         console.log("Siga!"); 
         break;
@@ -134,3 +134,38 @@ var restaurantes = ["Jun Sakamoto", "Fasano", "Chico Burguer", 2018, false];
 restaurantes.forEach(function(value, index){
     console.log(index, value);
 });
+
+
+//atributos e métodos utilizando função anônima e instanciando o objeto
+let celular = function(){
+    this.cor3 = "prata";
+
+    this.ligar = function(){
+        console.log("uma ligação");
+        return "duas ligações"; 
+    }
+}
+//Instanciando o objeto celular
+let objeto = new celular();
+//acessando a variável local cor3 com o metodo .cor3
+console.log(objeto.cor3);
+//acessando o 
+console.log(objeto.ligar());
+
+//Escrevendo a mesma coisa só que em javascript moderno
+class celular2{
+    constructor(){
+        this.cor4 = "Cinza-escuro";
+    }
+    ligar(){
+        console.log("uma ligação");
+        return "ligando";
+    }
+}
+//Instanciando o objeto celular
+let objeto2 = new celular2();
+//acessando a variável local cor3 com o metodo .cor3
+console.log(objeto2.cor4);
+
+console.log(objeto2.ligar());
+
