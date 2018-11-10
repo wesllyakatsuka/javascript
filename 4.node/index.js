@@ -21,7 +21,7 @@ switch (req.url){
 		users:[{
 			name: 'Weslly',
 			email: 'wesllyakasuka@hotmail.com',
-			id:10
+			id:7
 		}]
 	}));
 }
