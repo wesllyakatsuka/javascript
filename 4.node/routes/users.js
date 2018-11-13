@@ -13,12 +13,11 @@ module.exports = (app) => {
 	
 	});
 	
-	app.get('/users/admin', (req, res) => {
-		res.statusCode = 200;
-		res.setHeader('Contetnt-Type', 'application/json');
-		res.json({
-			users: []
-		});
+	app.post('/users', (req, res) => {
+
+		res.json(req.body);
+		
+		
 	
 	});
 	
