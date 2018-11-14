@@ -16,7 +16,7 @@ module.exports = (app) => {
 				app.utils.error.send(err, req, res);
 			}else{
 				res.statusCode = 200;
-				res.setHeader('Contetnt-Type', 'application/json');
+				res.setHeader('Content-Type', 'application/json');
 				res.json({
 					
 					users: users
@@ -69,6 +69,20 @@ routeId.put((req, res) => {
 			res.status(200).json(Object.assign(req.params, req.body)); 
 		}
 	})  ;
+
+});
+
+routeId.delete((req, res) => {
+
+	db.remove({_id: req.params.id }, {}, err => {
+
+		if(err){
+			app.utils.error.send(err, req, res);
+
+		} else {
+			res.status(200).json(req.params); 
+		}
+	});
 
 });
 
