@@ -29,6 +29,8 @@ module.exports = (app) => {
 	
 	route.post((req, res) => {
 
+		
+
 		db.insert(req.body,(err, user) => {
 
 			if(err){
