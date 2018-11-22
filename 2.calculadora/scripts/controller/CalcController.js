@@ -8,16 +8,17 @@ class CalcController{
         this._timeEl = document.querySelector("#hora");
         this._currentDate;
         this.initialize();
+        this.initButtonsEvents();
 
     }
 
     initialize(){
 
-        this.setDisplaydateTime();
+        this.setDisplayDateTime();
        
         setInterval(()=>{
 
-            this.setDisplaydateTime();
+            this.setDisplayDateTime();
 
         }, 1000);
     }
@@ -25,9 +26,18 @@ class CalcController{
 
     initButtonsEvents(){
         let buttons = document.querySelectorAll("#buttons > g, #parts > g");
+
+        buttons.forEach((btn, index) => {
+            
+            btn.addEventListener('click', e => {
+
+                console.log(btn.className.baseVal.replace("btn-", ""));
+            
+        });
+        }); 
     }
 
-    setDisplaydateTime(){
+    setDisplayDateTime(){
         this.displayDate = this.currentDate.toLocaleDateString(this._locale, {
             day: "2-digit",
             month: "long",
